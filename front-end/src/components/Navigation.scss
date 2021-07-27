@@ -1,0 +1,48 @@
+@import "src/theme/colors";
+
+#Navigation {
+  background: white;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  height: 64px;
+  z-index: 100;
+  ul {
+    display: flex;
+    justify-content: right;
+
+    li {
+      list-style: none;
+
+      img {
+        width: 50px;
+        height: auto;
+        margin: -40px 10px -30px -10px;
+      }
+
+      &:first-child {
+        margin-right: auto;
+      }
+
+      a {
+        display: block;
+        font-size: 1.2rem;
+        padding: 1.1rem 1.8rem;
+        text-decoration: none;
+        color: $text-dark;
+        font-weight: bold;
+
+        &:hover {
+          background: rgb(188, 188, 255);
+          -webkit-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,248 @@
+@import "src/theme/colors";
+
+.homeIndex {
+  display: flex;
+  position: relative;
+
+  video {
+    filter: blur(5px);
+    transform: scale(1.02);
+    width: 100%;
+    height: 91.4vh;
+    object-fit: cover;
+    margin: -17px 0 0 0;
+
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+  }
+
+  .title {
+    box-shadow: 0 0 15px -7px rgba($color: #000000, $alpha: 0.75);
+    display: inline-block;
+    animation: fadeIn 1s;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 750px;
+    margin: 32px;
+    max-width: calc(100% - 64px);
+    border-radius: 5px;
+    padding: 100px 70px 100px 70px;
+
+    text-align: center;
+
+    h3 {
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+      margin: -30px 0 0 0;
+      font-size: 40px;
+      color: black;
+    }
+
+    p {
+      text-align: left;
+      margin: 40px 0 0 0;
+      text-shadow: 10px 0 15px 10px rgba(0, 0, 0, 0.0);
+      font-size: 20px;
+      color: rgb(88, 88, 88);
+    }
+
+    .reachus {
+      background-color: rgb(158, 158, 0);
+    }
+
+    .reachus:hover {
+      background-color: rgb(109, 109, 0);
+    }
+
+    button {
+      background-color: blue;
+      color: white;
+
+      border-radius: 10px;
+      padding: 25px 52px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 40px 10px -20px 10px;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      transition: all 0.4s;
+      background-color: darkblue;
+      color: rgb(255, 255, 162);
+    }
+  }
+}
+
+.home2 {
+  display: flex;
+  align-items: center;
+  padding: 45px;
+
+  img {
+    height: 70vh;
+    width: 70vh;
+  }
+
+  .widget {
+    padding: 40px;
+    box-shadow: 0 0 15px -7px rgba($color: #000000, $alpha: 0.75);
+
+    transition: all 0.4s;
+
+    h3 {
+      font-size: 45px;
+      color: rgb(0, 0, 189);
+      margin-bottom: 30px;
+    }
+
+    span {
+      font-size: 20px;
+      color: $text-dark-alt;
+    }
+  }
+
+  .widget:hover {
+    transform: scale(1.01);
+  }
+}
+
+.wrapper {
+  h2 {
+    font-size: 45px;
+    padding: 20px 0;
+
+    color: rgb(0, 56, 0);
+  }
+
+  background-color: $bg-color-alt2;
+  text-align: center;
+  min-height: 100vh;
+
+  .cards {
+    display: flex;
+    .box {
+      background-color: white;
+      margin: 10px;
+      padding: 30px;
+      box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.75);
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: middle;
+
+      transition: all 0.4s;
+
+      h3 {
+        font-size: 35px;
+        color: $text-dark-alt;
+      }
+
+      img {
+        width: 100%;
+        height: 30vh;
+        margin: 20px 0;
+
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      h4 {
+        padding: 0 10px;
+        font-size: 17px;
+        color: $text-light-alt;
+      }
+    }
+
+    .box:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+footer  {
+  background: $text-dark;
+  color: $text-light;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+
+  h6 {
+    font-weight: bolder;
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: inherit;
+    font-weight: bold;
+    &:hover {
+      color: darken($text-light, 30%);
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cards {
+    flex-direction: column;
+  }
+  .home2 {
+    flex-direction: column;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

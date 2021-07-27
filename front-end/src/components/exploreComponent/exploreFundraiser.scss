@@ -1,0 +1,90 @@
+@import "src/theme/colors";
+
+.fundraiser {
+  border-radius: 10px 10px 0 0;
+  border-color: beige;
+  margin: 20px 10px;
+
+  padding: 10px 10px 10px 7px;
+  background-color: white;
+
+  width: 260px;
+  display: flex;
+  place-content: center;
+
+  transition-duration: 0.4s;
+  box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.5);
+
+  h1 {
+    margin: -30px 0 0 0;
+    height: 23%;
+    font-size: 20px;
+    object-fit: cover;
+  }
+
+  img {
+    margin: 0 0 10px 0;
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+
+    object-fit: cover;
+  }
+
+  svg {
+    display: block;
+
+    margin: 10px auto auto;
+    border-radius: 2px;
+  }
+
+  h3 {
+    margin: 10px 0 0 0;
+    font-size: 15px;
+    color: grey;
+  }
+
+  h4 {
+    margin: 10px 0 0 0;
+    font-size: 15px;
+    color: $text-dark-alt;
+  }
+}
+
+.fundraiser:hover {
+  transform: scale(1.05);
+  background-color: rgb(210, 244, 255);
+}
+
+.exploreFundraiserText {
+  background-color: white;
+  margin-left: 30px;
+  align-items: center;
+}
+
+.exploreName {
+  display: flex;
+}
+
+.exploreDescription {
+  padding-left: 310px;
+  color: rgb(59, 59, 59);
+}
+
+.exploreGoal {
+  margin-top: 120px;
+}
+
+.exploreGoalDescription {
+  align-items: center;
+  padding-left: 30px;
+}
+
+button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}

@@ -1,0 +1,123 @@
+.newUser {
+  flex: 4;
+  background-color: white;
+}
+
+.newUserTitle {
+  margin-left: -50px;
+  color: #4e1e9b;
+}
+
+.newUserForm {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px 100px 0 10px;
+  box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.newUserItem {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-right: 40px;
+  margin-left: 30px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+
+.newUserItem_ {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-right: 400px;
+  margin-left: 30px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+
+.newUserItem > label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(151, 150, 150);
+}
+
+.newUserItem > input {
+  height: 30px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.newUserItem > input {
+  height: 30px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.newUserSelect {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.newUserButton {
+  display: flex;
+  box-shadow: 5px 5px 15px -10px rgba(0, 0, 0, 0.75);
+
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border: none;
+  color: white;
+  padding: 7px 74px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-left: 330px;
+  margin-bottom: 50px;
+  cursor: pointer;
+
+  background: linear-gradient(to top, rgb(44, 44, 255), rgb(0, 0, 192));
+  position: relative;
+  z-index: 1;
+}
+
+.newUserButton::before {
+  border-radius: 25px;
+  background-color: rgb(131, 124, 124);
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.newUserButton:hover {
+  color: rgb(172, 255, 147);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.adminCreateChooseFile {
+  color: rgb(141, 128, 128);
+}
+
+.createTextArea {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.adminCreateShowImage {
+  float: right;
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+}

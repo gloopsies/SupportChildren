@@ -1,0 +1,61 @@
+@import "src/theme/colors";
+
+.container {
+  max-width: unset !important;
+  padding: 0 64px;
+  .header {
+    margin: 0 60px 0 0;
+    display: flex;
+  }
+
+  .fundraisers {
+    input {
+      display: flex;
+      font-size: 17px;
+      border-radius: 5px;
+
+      padding: 5px 10px 5px 34px;
+
+      white-space: nowrap;
+
+      background-image: url('https://cdn3.iconfinder.com/data/icons/search-engine-optimization-seo-3/320/loupe_magnifier_magnifying_search-512.png');
+      background-size: 10%;
+      background-repeat: no-repeat;
+      background-position: 2% center;
+    }
+
+    input:focus {
+      transition: all 0.2s;
+
+      background-color: rgb(235, 247, 255);
+      outline: none;
+    }
+
+
+    .cards {
+      display: flex;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      opacity: 0;
+      -webkit-animation: fadeIn ease-in 1;
+      -moz-animation: fadeIn ease-in 1;
+      animation: fadeIn ease-in 1;
+
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+
+      -webkit-animation-duration: 0.7s;
+      -moz-animation-duration: 0.7s;
+      animation-duration: 0.7s;
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  .container .fundraisers .cards {
+    flex-direction: column;
+  }
+}

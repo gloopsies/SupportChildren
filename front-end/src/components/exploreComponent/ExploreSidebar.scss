@@ -1,0 +1,90 @@
+@import "src/theme/colors";
+
+.exploreSidebar {
+  top: 50px;
+
+  a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  & > div {
+    padding: 0;
+    color: #555;
+  }
+
+
+  h4 {
+    margin: 20px 0 5px 0;
+    font-size: 23px;
+    color: rgb(108, 118, 255);
+  }
+
+  .sort {
+    display: flex;
+    vertical-align: center;
+
+    select {
+      margin: 10px 0 0 0;
+      padding: 5px 15px;
+      color: rgb(73, 73, 73);
+    }
+
+    .MuiSvgIcon-root {
+      height: 2.4em !important;
+    }
+
+    .arrow {
+      margin: 0 0 -20px 10px;
+      cursor: pointer;
+
+
+    }
+
+    .arrow.rotate {
+      margin: 0 0 -20px 10px;
+      cursor: pointer;
+      transform: rotate(180deg);
+    }
+  }
+
+  .component {
+    .checkbox {
+      input {
+        cursor: pointer;
+        margin-right: 10px;
+        border-radius: 2px;
+      }
+
+      label {
+        cursor: pointer;
+        font-size: 17px;
+        color: $text-dark-alt;
+      }
+    }
+  }
+
+  .dategoal {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    label {
+      color: $text-dark-alt;
+      margin-bottom: 5px;
+      margin-top: 2px;
+    }
+
+    input {
+      border-radius: 3px;
+      padding-left: 5px;
+    }
+  }
+}
+
+.exploreSidebarTitle {
+  font-size: 30px;
+  color: rgb(70, 73, 255);
+  margin-bottom: 15px;
+}

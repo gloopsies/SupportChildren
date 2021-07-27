@@ -1,0 +1,60 @@
+@import "src/theme/colors";
+
+.title {
+  color: black;
+  display: flex;
+
+  span {
+    color: rgb(190, 0, 0);
+  }
+}
+
+.modalBody {
+  display: flex;
+
+  img {
+    margin: 0 15px 0 0;
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+
+    object-fit: cover;
+  }
+
+  p {
+    color: rgb(121, 119, 119);
+    font-size: larger;
+    width: 100%;
+  }
+}
+
+.modalBody2 {
+  display: inline;
+
+  svg {
+
+    margin: 15px 0 0 23px; // Hardcoded
+    border-radius: 2px;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 10px 5px 0 0;
+    font-size: 15px;
+    color: grey;
+  }
+
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.inputBid {
+  width: 30%;
+  padding: 4px 0 4px 10px;
+  margin: 0 20px 0 0;
+  border-radius: 3px;
+}

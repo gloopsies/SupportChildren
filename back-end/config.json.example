@@ -1,0 +1,33 @@
+{
+  "database": {
+    "host": "",
+    "port": "",
+    "username": "",
+    "password": "",
+    "name": ""
+  },
+  "login": {
+    "username": "",
+    "password": ""
+  },
+  "redis": {
+    "host": "",
+    "password": ""
+  },
+  "images": {
+    "local": "./images/",
+    "serve": "/images/"
+  },
+  "email": {
+    "email": "email",
+    "password": "password",
+    "smtp_host": "smtp.host",
+    "smtp_port": "587",
+    "admin_mail": []
+  },
+  "host": "host",
+  "cors": "cors",
+  "port": "8080",
+  "log_file": "./log.txt",
+  "debug": true
+}

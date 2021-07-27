@@ -1,0 +1,67 @@
+import React from 'react';
+import Web3 from 'web3';
+import FundRaisings from '../ethereum/build/contracts/FundRaisings.json';
+import FundRaising from '../ethereum/build/contracts/FundRaising.json';
+
+// Add this two functions, to load web3 provider and to loadBlockChainData
+async
+componentWillMount()
+{
+  await this.loadWeb3()
+  await this.loadBlockchainData()
+}
+
+async
+loadWeb3()
+{
+  if (window.ethereum) {
+    window.web3 = new Web3(window.ethereum)
+    await window.ethereum.enable()
+  } else if (window.web3) {
+    window.web3 = new Web3(window.web3.currentProvider)
+  } else {
+    window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
+    window.location = "/adminPanel"
+  }
+}
+
+async
+loadBlockchainData()
+{
+  const web3 = window.web3
+  // Load account
+  const accounts = await web3.eth.getAccounts()
+  this.setState({accounts})
+  const networkId = await web3.eth.net.getId()
+  const networkData = FundRaisings.networks[networkId]
+  if (networkData) {
+    const contract = new web3.eth.Contract(FundRaisings.abi, "0xBcB22a513E5cBE8204BE16a501e9AC8a47205Bc0");
+    this.setState({contract})
+    // Fundraisings is array of addresses of deployed Fundraising contracts
+    let Fundraisings = await contract.methods.getDeployedCampaigns().call();
+    this.setState({Fundraisings})
+    for (i = 0, i < Fundraisings.length, i++) {
+      let contract = new web3.eth.Contract(FundRaising.abi, Fundraisings[i]);
+      let raisedAmount = await contract.methods.raisedAmount().call();
+      this.setState(RaisedAmounts
+    :
+      [...this.state.RaisedAmounts, raisedAmount
+    )
+    }
+  } else {
+    window.alert('Smart contract not deployed to detected network.')
+  }
+}
+
+
+constructor(props)
+{
+  super(props);
+  this.state =
+    {
+      Fundraisings: [],
+      RaisedAmounts: []
+    };
+
+
+//After Loading Data , Go through Fundraisers and connect data with backend data

@@ -1,0 +1,28 @@
+// Event Handler for Donate button
+
+// When we click on some Fundraiser, I assume we'll have contract object on page
+
+async
+Donate(event, amount, email)
+{
+  event.preventDefault();
+  let contribution = await this.state.contract.methods.contribute().send({from: this.state.account, value: amount});
+  // send email to user after succesfull contribution
+  // We can also use here Event property, contribution.logs[0].event
+  // just need to see how to use try and catch in this case
+  // because we can check if Goal Reached Event is emmited and then send to us email to be
+  // informed when Fundraiser is Finished
+  // Make payment function
+}
+
+
+/*
+<input placeholder="How much money you want to contribute" type="number" ref={(input) => { this.amount = input }}
+<input placeholder="Your email for notification" type="text" ref={(input) => { this.email = input }}
+
+  <button onClick={(event) => {
+           const amount = this.amount.value  
+           const email = this.email.value  
+           this.Donate(event,amount,email)
+         }} title="Donate">Donate</button>
+*/
