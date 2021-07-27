@@ -9,6 +9,7 @@ export default function Transactions() {
     const fetchData = async () => {
       try {
         let ok = await axios.get(`${process.env["REACT_APP_BACKEND_ADDRESS"]}/transactions`);
+        if(ok.data === null) return;
         setTransactions(ok.data);
       } catch (err) {
         console.log(err)

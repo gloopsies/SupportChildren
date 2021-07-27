@@ -10,6 +10,9 @@ export default function Charts({title, dataKey, grid}) {
     const fetchData = async () => {
       try {
         let ok = await axios.get(`${process.env["REACT_APP_BACKEND_ADDRESS"]}/transactions`);
+
+        if(ok.data === null) return;
+
         for (let e of ok.data) {
           e.id=e.transaction;
         }
